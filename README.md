@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # 🍎 meus-dotfiles
 
 ![Fedora](https://img.shields.io/badge/Fedora-45-51A2DA?style=flat&logo=fedora&logoColor=white)
