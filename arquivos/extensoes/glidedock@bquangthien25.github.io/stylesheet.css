@@ -1,0 +1,150 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+
+/* Invisible wrapper: touches the screen edge (for the strut) and floats the dock off it. */
+.glidedock-container.bottom { padding-bottom: 8px; }
+.glidedock-container.left { padding-left: 8px; }
+.glidedock-container.right { padding-right: 8px; }
+
+/* The bar itself. It is a layer of its own behind the icons, so that it can
+   be stretched when magnified icons need more room. */
+.glidedock-background {
+    /* Fallbacks only: colour alpha and radius are overridden from the settings. */
+    background-color: rgba(22, 22, 26, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* The row of icons. Its border is the room the bar's border takes. */
+.glidedock {
+    /* Fallback only: the padding is overridden from the settings. */
+    border: 1px solid transparent;
+    padding: 8px 10px 4px 10px;
+}
+
+/* Buttons are bare hit areas in every state, whatever the shell theme does
+   to buttons in general. */
+.glidedock-button,
+.glidedock-button:hover,
+.glidedock-button:focus,
+.glidedock-button:active,
+.glidedock-button:checked {
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Also used for the Show Apps icon of the shell's own dash. Shell themes
+   like to hide that icon and paint an image over it; neither may stick. */
+.glidedock-show-apps,
+.glidedock-show-apps:hover,
+.glidedock-show-apps:active,
+.glidedock-button:hover .glidedock-show-apps,
+.glidedock-button:active .glidedock-show-apps,
+.show-apps .glidedock-show-apps,
+.show-apps:hover .glidedock-show-apps,
+.show-apps:checked .glidedock-show-apps {
+    color: #ffffff !important;
+    background-image: none;
+}
+
+/* The downloads folder and the trash use the icon theme's full-colour icons;
+   the colour only matters for a theme that has nothing but symbolic ones. */
+.glidedock-place {
+    color: #ffffff;
+}
+
+/* Rows of their menus; file names can be very long. */
+.glidedock-menu-label {
+    max-width: 22em;
+}
+
+/* The fan of a stack. No padding around a row: its icon must touch the edge
+   of the row for the fan to line up with the dock icon (see stacks.js). */
+.glidedock-stack-button,
+.glidedock-stack-button:hover,
+.glidedock-stack-button:focus,
+.glidedock-stack-button:active {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.glidedock-stack-row {
+    spacing: 10px;
+}
+
+.glidedock-stack-label {
+    max-width: 20em;
+    background-color: rgba(18, 18, 22, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 8px;
+    padding: 4px 10px;
+    color: #ffffff;
+    font-size: 10pt;
+    font-weight: 500;
+}
+
+.glidedock-stack-button:hover .glidedock-stack-label,
+.glidedock-stack-button:focus .glidedock-stack-label {
+    background-color: rgba(78, 78, 88, 0.95);
+}
+
+/* Files dragged over the dock: they can be dropped, or they cannot. */
+.glidedock-background.drop-target {
+    border-color: rgba(120, 170, 255, 0.90);
+    box-shadow: 0 0 18px rgba(80, 140, 255, 0.55);
+}
+
+.glidedock-background.drop-reject {
+    border-color: rgba(255, 120, 120, 0.85);
+    box-shadow: 0 0 18px rgba(255, 80, 80, 0.40);
+}
+
+/* Drawn over the placeholder of an app being installed. */
+.glidedock-install-spinner {
+    color: #ffffff;
+}
+
+.glidedock-dot {
+    background-color: rgba(255, 255, 255, 0.50);
+    border-radius: 99px;
+}
+
+.glidedock-dot.focused {
+    background-color: #ffffff;
+}
+
+/* A separator is inset 5px from both ends of the icons beside it; the larger
+   margin is the side of the running dots (2px gap + 5px dot). */
+.glidedock-separator {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.glidedock.bottom .glidedock-separator {
+    width: 1px;
+    margin: 5px 7px 12px 7px;
+}
+
+.glidedock.left .glidedock-separator {
+    height: 1px;
+    margin: 7px 5px 7px 12px;
+}
+
+.glidedock.right .glidedock-separator {
+    height: 1px;
+    margin: 7px 12px 7px 5px;
+}
+
+.glidedock-label {
+    background-color: rgba(18, 18, 22, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 8px;
+    padding: 5px 11px;
+    color: #ffffff;
+    font-size: 10pt;
+    font-weight: 500;
+}

@@ -1,0 +1,8 @@
+discord/
+gh/
+goa-1.0/
+mozilla/
+.ssh/
+*.log
+*.pem
+*.key

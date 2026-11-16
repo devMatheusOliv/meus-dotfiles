@@ -1,0 +1,13 @@
+saturation-extension@zb3.me
+blur-my-shell@aunetx
+caffeine@patapon.info
+clipboard-indicator@tudmotu.com
+user-theme@gnome-shell-extensions.gcampax.github.com
+glidedock@bquangthien25.github.io
+kiwi@kemma
+advanced-alt-tab@G-dH.github.com
+Vitals@CoreCoding.com
+just-perfection-desktop@just-perfection
+weatheroclock@CleoMenezesJr.github.io
+desktop-widgets@r3nhick
+background-logo@fedorahosted.org
