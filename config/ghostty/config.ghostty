@@ -1,0 +1,11 @@
+theme = Adwaita Dark
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+window-width = 118
+window-height = 36
+window-padding-x = 8
+window-padding-y = 8
+window-theme = dark
+background-opacity = 1.0
+cursor-style = block
+confirm-close-surface = false
